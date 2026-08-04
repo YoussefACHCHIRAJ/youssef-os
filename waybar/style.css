@@ -1,0 +1,121 @@
+@define-color highlight rgba(117, 241, 250, 1);
+@define-color dark-9 rgba(24, 24, 27, 1);
+@define-color dark-8 rgba(39, 39, 42, 1);
+@define-color dark-7 rgba(63, 63, 70, 1);
+@define-color dark-6 rgba(82, 82, 91, 1);
+@define-color dark-5 rgba(113, 113, 122, 1);
+@define-color purple rgba(167, 139, 250, 1);
+@define-color yellow rgba(250, 204, 21, 1);
+@define-color green rgba(74, 222, 128, 1);
+
+* {
+  /* `otf-font-awesome` is required to be installed for icons */
+  font-family: JetBrainsMono Nerd Font Propo;
+  font-size: 12px;
+}
+
+window#waybar {
+  background-color: transparent;
+  color: white;
+}
+
+#workspaces {
+  margin-right: 5px;
+  margin-top: 2px;
+  border-right: 1px solid @dark-9;
+}
+
+#workspaces button {
+  padding: 1px;
+  margin: 2px 0px 2px 7px;
+  background: transparent;
+  border-radius: 2px;
+  color: white;
+}
+
+#workspaces button.active {
+  background: @purple;
+  color: black;
+  font-weight: 700;
+}
+
+#submap,
+#battery,
+#bluetooth,
+#network,
+#cpu,
+#memory,
+#volume,
+#custom-notification,
+#clock {
+  border-radius: 15px;
+  padding: 0px 10px;
+  background: @dark-9;
+  margin: 2px 5px 2px 0px;
+  font-weight: bold;
+}
+
+#mpris {
+  border-radius: 8px;
+  padding: 0px 10px;
+  color: @purple;
+  margin: 2px 5px 2px 0px;
+
+}
+
+/* Style when muted */
+#pulseaudio.muted {
+  color: #ff5555;
+}
+
+/* Style for specific volume levels (if using states) */
+#pulseaudio.low {
+  color: #ffaa00;
+}
+
+#pulseaudio.high {
+  color: #55ff55;
+}
+
+#clock {
+  margin-right: 10px;
+}
+
+#submap,
+#battery,
+#bluetooth,
+#network,
+#cpu,
+#memory,
+#volume,
+#custom-notification,
+#clock,
+#pulseaudio,
+#mpris,
+#hyprland-window {
+  font-size: 10px;
+}
+
+#network {
+  color: @purple;
+}
+
+#volume {
+  color: @yellow;
+}
+
+#submap,
+#workspaces button.urgent {
+  background: rgba(227, 81, 73, 1);
+  color: black;
+}
+
+
+tooltip {
+  background: @dark-9;
+  border-radius: 5px;
+}
+
+tooltip label {
+  color: white;
+}
